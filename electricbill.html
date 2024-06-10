@@ -1,0 +1,228 @@
+<html>
+
+<head>
+    <style>
+        #display {
+            height: 20%;
+            width: 47%;
+            background-color: rgba(152, 220, 232, 0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: xx-large;
+            margin-left: 1%;
+
+        }
+
+        .bill-body {
+            height: 100vh;
+            width: 100vw;
+            background-color: antiquewhite;
+            background-image: url(./assets/billbgimg.jpg);
+
+            background-repeat: no-repeat;
+            background-size: 100vh 100%;
+            display: flex;
+            flex-direction: column;
+            margin-left: 25%;
+
+        }
+
+        #units {
+            width: 20%;
+        }
+
+        .button {
+            width: 20%;
+        }
+
+        .discription {
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        table {
+            height: 30%;
+            width: 50%;
+            border-collapse: collapse;
+            border-color: black;
+            margin-top: 5%;
+            background-color: rgba(138, 184, 177, 0.421);
+            margin-left: 0.5%;
+            border-collapse: collapse;
+        }
+
+        td {
+            border-style: solid;
+            border-width: 2px;
+            font-size: large;
+            border-color: black;
+        }
+
+        th {
+            border-style: solid;
+            border-width: 2px;
+            font-size: larger;
+        }
+
+        .table-caption {
+            margin-right: 60%;
+        }
+
+        .row-one {
+            color: rgb(4, 73, 4);
+            border-color: black;
+        }
+
+        .row-two {
+            color: rgb(42, 37, 37);
+            border-color: black;
+        }
+
+        .row-three {
+            color: rgb(255, 255, 5);
+            border-color: black;
+        }
+
+        .row-four {
+            color: rgb(255, 5, 5);
+            border-color: black;
+            
+        }
+    </style>
+    <script>
+
+        function unitsConsumed() {
+            let x = Number(document.getElementById("units").value);
+            let y = document.getElementById("late").value;
+            let output = 0;
+
+            if (x <= 50) {
+                output = x * 1.5;
+                document.getElementById("display").innerHTML = "Your Bill is rs " + output;
+
+                if ((y > 10)&&(y<20)) {
+                    document.getElementById("display").innerHTML = output + 20 + "(Additional late fees aplicable)";
+                }
+               else if ((y > 20) && (y<25)) {
+                    document.getElementById("display").innerHTML = output + 50 + "(Additional late fees aplicable)";
+                }
+                else if ((y > 25)&&(y<180)) {
+                    document.getElementById("display").innerHTML = output + 100 + "(Additional late fees aplicable)";
+                }
+                else if (y >= 180) {
+                    document.getElementById("display").innerHTML =  output + 20000 + "(You have been fined with rs 20000 and your Supply has been CUT)" ;
+                }
+
+            }
+            else if ((x > 50) && (x < 151)) {
+                output = (50 * 1.5 + (x - 50) * 2.5) + (5 / 100) * x;
+                document.getElementById("display").innerHTML = "Your Bill is rs" + output;
+                if ((y > 10)&&(y<=20)){
+                    document.getElementById("display").innerHTML = output + 20 +"(Additional late fees aplicable)";
+                }
+               else if ((y > 20) && (y<=25)) {
+                    document.getElementById("display").innerHTML = output + 50 +"(Additional late fees aplicable)";
+                }
+                else if ((y >= 25)&&(y<180)) {
+                    document.getElementById("display").innerHTML = output + 100 + "(Additional late fees aplicable)";
+                }
+                else if (y >= 180) {
+                    document.getElementById("display").innerHTML =  output + 20000 + "(You have been fined with rs 20000 and your Supply has been CUT)" ;
+                }
+            }
+            else if ((x > 150) && (x < 251)) {
+                output = (50 * 1.5 + (100) * 2.5 + (x - 150) * 3.5) + (10 / 100) * x;
+                document.getElementById("display").innerHTML = "Your Bill is rs" + output;
+                if ((y > 10)&&(y<=20)) {
+                    document.getElementById("display").innerHTML = output + 20 +"(Additional late fees aplicable)";
+                }
+                else if ((y > 20) && (y<=25)) {
+                    document.getElementById("display").innerHTML = output + 50 +"(Additional late fees aplicable)";
+                }
+                else if ((y > 25)&&(y<=180)) {
+                    document.getElementById("display").innerHTML = output + 100 +"(Additional late fees aplicable)";
+                }
+                else if (y >= 180) {
+                    document.getElementById("display").innerHTML =  output + 20000 + "(You have been fined with rs 20000 and your Supply has been CUT)" ;
+                }
+            }
+            else if (x > 250) {
+                output = (50 * 1.5 + (100) * 2.5 + (100) * 3.5 + (x - 250) * 5) + (20 / 100) * x;
+                document.getElementById("display").innerHTML = "Your Bill is rs" + output;
+                if ((y > 10)&&(y<=20)) {
+                    document.getElementById("display").innerHTML =  output + 20 + "(Additional late fees aplicable)";
+                }
+                else if ((y > 20) && (y<=25)) {
+                    document.getElementById("display").innerHTML = output + 50 +"(Additional late fees aplicable)";
+                }
+                else if ((y > 25)&&(y<=180)) {
+                    document.getElementById("display").innerHTML = output + 100 + "(Additional late fees aplicable)";
+                }
+                else if (y >= 180) {
+                    document.getElementById("display").innerHTML =  output + 20000 + "(You have been fined with rs 20000 and your Supply has been CUT)" ;
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="bill-body">
+        <div id="display"></div>
+        <div class="discription">
+            <h4>Enter Units Consumed :</h4> <input type="number" id="units" placeholder="Units Consumed">
+            <div>
+                <h4>Late Payment Days (if any): </h4><input type="number" id="late" placeholder="Late Fees">
+            </div><br>
+            <div class="button"><button onclick="unitsConsumed()" >Calculate Bill</button></div>
+            <div>
+                <div>
+                    <table>
+                        <caption class="table-caption">
+                            <h3>Charges Information:</h3>
+                        </caption>
+
+                        <tbody>
+                            <tr>
+                                <th>Range (in units)</th>
+                                <th>Rate per unit</th>
+                                <th>Surplus Usage Charges(In percentage)</th>
+                                <th>Late Fees(In Rs)</th>
+                            </tr>
+
+                            <tr class="row-one">
+                                <td>0-50</td>
+                                <td>1.5rs</td>
+                                <td>No Surplus Charge</td>
+                                <td>More than 10 days=20rs</td>
+                            </tr>
+                            <tr class="row-two">
+                                <td>51-150</td>
+                                <td>2.5rs</td>
+                                <td>5%</td>
+                                <td>More than 15 days=40rs</td>
+                            </tr>
+                            <tr class="row-three">
+                                <td>151-250</td>
+                                <td>3.5rs</td>
+                                <td>10%</td>
+                                <td>More than 25 days=100rs</td>
+                            </tr>
+                            <tr class="row-four">
+                                <td>251 and above</td>
+                                <td>5rs</td>
+                                <td>20%</td>
+                                <td>More than 180 days= Fine of 20000rs <br> and Supply CUT</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

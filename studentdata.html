@@ -1,0 +1,127 @@
+<html>
+
+<head>
+    <title>Student Data</title>
+    <!-- for responsive site -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+    <!-- styling -->
+    <link rel="stylesheet" href="studentdata.css">
+</head>
+
+<body class="body">
+    <div class="buttons">
+        <button onclick="dataFunction()">Student's Data Entry</button>
+        <button onclick="listFunction()">Student's List</button>
+    </div>
+    <!-- PAGE ONE -->
+    <div id="page-one">
+        <!-- buttons -->
+       
+        <div>
+            <!-- form -->
+            <!-- id="first-name" -->
+            <!-- id="last-name" -->
+            <form action="#" method="get">
+                <fieldset>
+                    <legend>
+                        <h1 class="heading">ENJOY PROGRAMMING : ENTER YOUR DETAILS
+                        </h1>
+                    </legend>
+                    <label class="details" for="firstname"> FIRST
+                        NAME:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</label>
+                    <input type="text" placeholder="Enter Firstname" id="first-name"><br><br>
+                    <label class="details" for="lastname">LAST
+                        NAME:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</label>
+                    <input type="text" placeholder="Enter Lastname" id="last-name"><br><br>
+
+                    <!-- educational information -->
+                    <!-- id="Schooling" -->
+                    <!-- id="jr-college" -->
+                    <!-- id="graduation" -->
+                    <!-- id="post-graduation" -->
+                    <!-- id="phd" -->
+
+                    <label class="details" for="education" id="educational
+                    ">Select your Education: &emsp;&emsp;</label>
+                    <input type="radio" name="education" id="Schooling">
+                    <label for="education" class="details1">Schooling</label>
+                    <input type="radio" name="education" id="jr-college">
+                    <label for="education" class="details1">Jr. College</label>
+                    <input type="radio" name="education" id="graduation">
+                    <label class="details1" for="education">Graduation</label>
+                    <input type="radio" name="education" id="post-graduation">
+                    <label for="education" class="details1">Post-Graduation</label>
+                    <input type="radio" for="education" name="education" id="phd">
+                    <label for="education" class="details1">Ph.D</label><br><br>
+
+
+
+
+
+
+                    <!-- personal information -->
+                    <!-- id="age" -->
+                    <label class="details" for="age">Date of Birth:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</label>
+                    <input type="date" id="age"><br><br>
+
+                    <!-- email -->
+                    <!-- id="email-id" -->
+                    <label for="email"
+                        class="details">Email:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</label>
+                    <input type="text" placeholder="Enter Email-id" id="email-id">
+                    <br><br>
+                    <!-- phone number -->
+                    <!-- id="contact-no" -->
+                    <label class="details" for="number">Contact No.:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</label>
+                    <select name="number" id="nation">
+                        <option value="+91Ind">+91</option>
+                        <option value="+1USA">+1</option>
+                        <option value="+44UK">+44</option>
+                        <option value="+61AUS">+61</option>
+                        <option value="+81JAP">+81</option>
+                    </select><input type="number" number="[0,9]{10}" id="contact-no"><br><br>
+
+                    <!-- address -->
+                    <!-- id="address-l1" -->
+                    <!-- id="address-l2" -->
+                    <!-- id="address-l3" -->
+                    <label for="address" class="details">Address :&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</label>
+                    <input type="text" placeholder="Address Line 1" id="address-l1"> <br> <br>
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp; &emsp;&emsp;&emsp;&emsp;&emsp;<input type="text"
+                        placeholder="Address Line 2" id="address-l2"> <br> <br>
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; &emsp;<input type="text"
+                        placeholder="Address Line 3" id="address-l3">
+                    <br><br>
+                    <button type="button" onclick="inputData()">SUBMIT</button>  <button type="reset">CLEAR</button>
+                    <!-- submit -->
+                    <!-- <input type="submit" onclick="inputData()"> -->
+                </fieldset>
+
+            </form>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- page-two -->
+    <!-- buttons -->
+    <div class="page-two" id="show">
+        
+        <caption>
+            <h1 class="caption"> Students' Information</h1>
+        </caption>
+        <table id="table-list">
+        </table>
+    </div>
+    <script src="studentdata.js">
+    </script>
+</body>
+
+</html>

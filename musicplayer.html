@@ -1,0 +1,117 @@
+<html>
+
+<head>
+    <style>
+        .body {
+            background-image: url("https://c4.wallpaperflare.com/wallpaper/738/744/882/music-vinyl-simple-background-minimalism-wallpaper-preview.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+            width: 100vw;
+        }
+
+        .music-station {
+            display: flex;
+            flex-direction: column;
+            margin: 10%;
+
+        }
+    </style>
+    <script>
+        // // Get the audio element
+
+
+        // // Function to play the audio
+        // function playAudio() {
+        //     let audio = document.getElementById("myAudio");
+        //     audio.play();
+
+        // }
+
+        // // Function to pause the audio
+        // function pauseAudio() {
+        //     let audio = document.getElementById("myAudio");
+        //     audio.pause();
+        // }
+        // // Function to play the audio
+        // function nextAudio() {
+        //     let audio = document.getElementById("secondAudio");
+        //     audio.play();
+        // }
+        // // Function to pause the audio
+        // function pauseAudioTwo() {
+        //     let audio = document.getElementById("secondAudio");
+        //     audio.pause();
+        // }
+        // // Function to play the audio
+        // function audioThree() {
+        //     let audio = document.getElementById("song");
+        //     audio.play();
+        // }
+        // // Function to pause the audio
+        // function pauseAudioThree() {
+        //     let audio = document.getElementById("song");
+        // audio.pause();
+        // }
+// '<audio id="firstSong"><source src="./assets/ethereal-vistas.mp3" type="audio/mpeg"></audio>, <audio id="secondSong"><source src="./assets/glossy.mp3"></audio>, <audio id="thirdSong"><source src="./assets/Rom Rom.mp3"></audio>'
+        let x = [];
+        function startAudio(){
+            let music = {};
+        music["songOne"] = document.getElementById("firstSong").audio;
+        music["songTwo"] = document.getElementById("secondSong").audio;
+        music["songThree"] = document.getElementById("thirdSong").audio;
+        x.push(music);
+        
+        }
+        let playSong =  
+
+        function previousAudio() {  
+            audio--;  
+            audio.play();
+            
+        }
+
+        function playAudio() {
+            audio.play();
+        }
+
+        function pauseAudio() {
+            audio.pause();
+        }
+        function nextAudio(){
+            audio++;
+            audio.play();
+        }
+    </script>
+</head>
+
+<body class="body">
+    <div class="music-station">
+        <div>
+            <button onclick="startAudio()">Start Music</button>
+            <button onclick="previousAudio()"> Previous Song</button>
+            <button onclick="playAudio()"> <img src="./assets/playbutton.jpg" height="35px" width="50px"></button>
+            <button onclick="pauseAudio()"><img src="./assets/pausebutton.jpg" height="35px" width="50px"></button>
+            <button onclick="nextAudio()"> Next Song </button>
+        </div>
+        <div class="songs" id="songs">
+
+
+            <audio id="firstSong">
+                <source src="./assets/ethereal-vistas.mp3" type="audio/mpeg">
+
+            </audio>
+            <audio id="secondSong">
+                <source src="./assets/glossy.mp3">
+            </audio>
+            <audio id="thirdSong">
+                <source src="./assets/Rom Rom.mp3">
+            </audio>
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>

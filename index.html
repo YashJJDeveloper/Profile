@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <link rel="stylesheet" href="page.css">
+</head>
+
+<body onload="homepage()">
+
+    <div class="video-background">
+        <video autoplay muted loop id="background-video">
+            <source src="./assets/samplevideo.mp4" type="video/mp4">
+
+        </video>
+    </div>
+
+    <div class="profile-container entry-animation">
+        <div class="profile-header">
+            <img src="./assets/profpic.jpg" alt="Profile Picture" class="profile-picture">
+            <h1 class="profile-name">Yash Jogekar</h1>
+            <p class="profile-bio">Web Developer, Designer and Enthusiast</p>
+        </div>
+        <div class="profile-content">
+            <section class="profile-section">
+                <h2>About Me</h2>
+                <p>Like to explore in the world of coding. Endavouring to achieve prowess in programming.</p>
+            </section>
+            <section class="profile-section">
+                <h2>Skills</h2>
+                <ul class="profile-skills">
+                    <li>HTML & CSS</li>
+                    <li>JavaScript</li>
+                    <li>React</li>
+                    <li>Node.js</li>
+                    <li>Python</li>
+                </ul>
+            </section>
+            <section class="profile-section">
+                <button
+                    style="margin-left: 38%; border: none; background-color:rgba(200, 203, 200, 0.157); font-size: 25px; color: #6c63ff;"
+                    onclick=" projectList()">PROJECTS</button>
+                <div class="profile-projects" id="project-lists">
+                    <div class="project">
+                        <h3>
+                            <ul>
+                                <li><a href="./electricbill.html" class="links">Project One</a></li>
+                            </ul>
+                        </h3>
+                        <p>Brief description of the project.</p>
+                    </div>
+                    <div class="project">
+                        <h3>
+                            <ul>
+                                <li><a href="./studentdata.html" class="links">Project Two</a></li>
+                            </ul>
+                        </h3>
+                        <p>Brief description of the project.</p>
+                    </div>
+                    <div class="project">
+                        <h3>
+                            <ul>
+                                <li><a href="./calc.html" class="links">Project Three</a></li>
+                            </ul>
+                        </h3>
+                        <p>Brief description of the project.</p>
+                    </div>
+
+                </div>
+            </section>
+        </div>
+
+    </div>
+
+</body>
+<script>
+    window.onload = function () {
+        homepage();
+    }
+    function homepage() {
+        document.getElementById("project-lists").hidden = true;
+    }
+    function projectList() {
+        document.getElementById("project-lists").hidden = false;
+
+    }
+</script>
+
+</html>

@@ -1,0 +1,76 @@
+.body {
+    background-image: url(./assets/formbgimg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.wlcm{
+    font-family: fantasy;
+    text-align: center;
+    text-decoration: solid;
+    font-weight: 500;
+    font-size: 150px;
+    margin-top: 150px;
+    color: #ab5193;
+}
+
+
+
+.form-page {
+    border: none;
+    background-color: rgba(255, 221, 0, 0.0);
+    font-size: xx-large;
+    text-decoration: solid;
+    margin-left: 80%;
+    color: rgba(81, 246, 4, 0.6);
+}
+
+.form-page:hover {
+    transform: scale(1.1);
+    color: rgba(229, 41, 41, 0.6);
+}
+
+.heading {
+    font-family: 'Rubik Glitch Pop', system-ui;
+
+    color: #78f25a;
+    font-size: 30px;
+
+}
+
+.details {
+    color: #aab1d7;
+    font-size: large;
+}
+
+.details1 {
+    color: #7a8bed;
+   
+}
+
+/* buttons for entry and listing */
+.buttons {
+    display: flex;
+    flex-direction: row;
+    margin-left: 20vw;
+    gap: 40vw;
+}
+
+/* tabling data style */
+table,
+      th,
+      tr,
+      td {
+        border-color: black;
+        border-style: solid;
+        border-collapse: collapse;
+        margin: 20px;
+        padding: 20px;
+      }
+
+
+
+.caption {
+    color: #78f25a;
+}
