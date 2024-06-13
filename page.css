@@ -207,7 +207,7 @@ body {
 
 
 /* FOR SMALLER SCREENS */
-@media (min-width:701px) and (max-width: 900px) {
+@media  (max-width: 300px) {
     body {
         font-family: Arial, sans-serif;
         background-color: #f4f4f9;
@@ -971,14 +971,14 @@ body {
     }
 
     .profile-section {
-        margin-bottom: 20px;
+        margin-bottom: -5px;
         padding: 10px;
         display: flex;
         flex-direction: column;
     }
 
     .profile-section h2 {
-        margin-bottom: 10px;
+        margin-bottom: -10px;
         color: #6b63ff;
     }
 
@@ -995,14 +995,16 @@ body {
 
     }
 
-    .profile-projects .project {
-        margin-bottom: 10px;
-
+   .profile-section {
+        margin-bottom: 20px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
     }
 
-    .project h3 {
-        margin: 0 0 5px;
-        color: #6c63ff;
+    .profile-section h2 {
+        margin-bottom: 10px;
+        color: #6b63ff;
     }
 
     .links {
