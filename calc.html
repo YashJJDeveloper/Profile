@@ -2,23 +2,30 @@
 <html>
     <head>
         <style>
+            body{
+                background-image: url(./assets/calcbg.jpg);
+                background-repeat: no-repeat;
+            background-size: cover;
+            background-position:center;
+            overflow: scroll;
+            }
             .main-box{
                 display: flex;
                 flex-direction: column;
                 height: 50vh;
-                width: 50vw;
+                width: 38vw;
                 border: 1px black solid;
                 border-radius: 2%;
-                margin-left: 5vw;
+                margin-left: 20vw;
                 margin-top: 5vh;
             }
             #display{
                 height: 30%;
                 width: 100%;
-                background-color: rgb(46, 43, 43);
+                background-color: rgba(46, 43, 43, 0.729);
                 color: white;
                 text-align: end;
-                
+                border-radius: 2%;
 
             }
             .keypad{
@@ -27,26 +34,32 @@
                 display: grid;
                 grid-template-rows: 1fr 1fr 1fr 1fr;
                 grid-template-columns: 1fr 1fr 1fr 1fr;
-                background-color: rgb(74, 70, 70);
+                background-color: rgba(74, 70, 70, 0.722);
+                border-radius: 2%;
             }
             .last{
                 display: grid;
                 grid-template-columns: 2fr 1fr 1fr;
                 height: 10%;
-                background-color: rgb(70, 69, 69);
+                background-color: rgba(70, 69, 69, 0.752);
+                border-radius: 2%;
             }
             .yellow{
-                background-color: orange;
+                background-color: rgba(255, 166, 0, 0.705);
+                border-radius: 10%;
             }
             .gray{
                 background-color: gray;
+                border-radius: 10%;
             }
             .button{
-                background-color: lightgray;
+                background-color: rgba(211, 211, 211, 0.612);
+                border-radius: 10%;
             }
             #number{
                 background-color: black;
                 color: white;
+                border-radius: 2%;
             }
         </style>
         <script>

@@ -32,11 +32,7 @@ function inputData() {
   information["contactNo"] = document.getElementById("contact-no").value;
   information["DOB"] = document.getElementById("age").value;
   information["emailID"] = document.getElementById("email-id").value;
-  information["educationOne"] = document.getElementById("Schooling").value;
-  information["educationTwo"] = document.getElementById("jr-college").value;
-  information["educationThree"] = document.getElementById("graduation").value;
-  information["educationFour"] = document.getElementById("post-graduation").value;
-  information["educationFive"] = document.getElementById("phd").value;
+  information["education"] = document.getElementById("educational").value;
   information["addressl1"] = document.getElementById("address-l1").value;
 
   information["addressl2"] = document.getElementById("address-l2").value;
@@ -86,7 +82,9 @@ function showData() {
       '</td>' + '<td class="email-id">'+
       output.emailID +
       '</td>' +
-      '<td class="schooling">'   + '</td>' +
+      '<td class="schooling">' +
+      output.education  +
+       '</td>' +
        '<td class="address-l1">' + 
        output.addressl1 + " " + output.addressl2 +" "  + output.addressl3 +
       "</td></tr>";

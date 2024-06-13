@@ -2,10 +2,17 @@
 
 <head>
     <style>
+        body{
+            background-image: url(./assets/billbgimg.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+           font-size: xx-large;
+            width: 80vw;
+        }
         #display {
             height: 20%;
             width: 47%;
-            background-color: rgba(152, 220, 232, 0.4);
+            background-color: rgba(152, 220, 232, 0.616);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -15,16 +22,13 @@
         }
 
         .bill-body {
-            height: 100vh;
-            width: 100vw;
-            background-color: antiquewhite;
-            background-image: url(./assets/billbgimg.jpg);
-
-            background-repeat: no-repeat;
-            background-size: 100vh 100%;
+            height: 80vh;
+            width: 80vw;
+            margin-top: 10%;
+            margin-left: 30vw;
             display: flex;
             flex-direction: column;
-            margin-left: 25%;
+            
 
         }
 
@@ -89,6 +93,195 @@
             color: rgb(255, 5, 5);
             border-color: black;
             
+        }
+        @media (min-width:300px) {
+            body{
+            background-image: url(./assets/billbgimg.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-size:xx-large;
+            width: 80vw;
+        }
+        #display {
+            height: 20%;
+            width: 75%;
+            background-color: rgba(152, 220, 232, 0.616);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: xx-large;
+            margin-left: 1%;
+
+        }
+
+        .bill-body {
+            height: 80vh;
+            width: 80vw;
+            margin-top: 10%;
+            margin-left: 30vw;
+            display: flex;
+            flex-direction: column;
+            
+
+        }
+
+        #units {
+            width: 20%;
+        }
+
+        .button {
+            width: 20%;
+        }
+
+        .discription {
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        table {
+            height: 50%;
+            width: 80%;
+            border-collapse: collapse;
+            border-color: black;
+            margin-top: 5%;
+            background-color: rgba(138, 184, 177, 0.421);
+            margin-left: 0.5%;
+            border-collapse: collapse;
+        }
+
+        td {
+            border-style: solid;
+            border-width: 2px;
+            font-size: large;
+            border-color: black;
+        }
+
+        th {
+            border-style: solid;
+            border-width: 2px;
+            font-size: larger;
+        }
+
+        .table-caption {
+            margin-right: 60%;
+        }
+
+        .row-one {
+            color: rgb(4, 73, 4);
+            border-color: black;
+        }
+
+        .row-two {
+            color: rgb(42, 37, 37);
+            border-color: black;
+        }
+
+        .row-three {
+            color: rgb(255, 255, 5);
+            border-color: black;
+        }
+
+        .row-four {
+            color: rgb(255, 5, 5);
+            border-color: black;
+            
+        }
+        }
+        @media (min-width:500px)  {
+            body{
+            background-image: url(./assets/billbgimg.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-size:xx-large;
+            width: 80vw;
+        }
+        #display {
+            height: 150px;
+            width: 500px;
+            
+            background-color: rgba(152, 220, 232, 0.616);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: xx-large;
+            /* margin-left: 1%; */
+
+        }
+
+        .bill-body {
+            height: 80vh;
+            width: 80vw;
+            margin-top: 10%;
+            margin-left: 20vw;
+            display: flex;
+            flex-direction: column;
+            
+
+        }
+
+        #units {
+            width: 20%;
+        }
+
+        .button {
+            width: 20%;
+        }
+
+        .discription {
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        table {
+            height: 50%;
+            width: 80%;
+            border-collapse: collapse;
+            border-color: black;
+            margin-top: 5%;
+            background-color: rgba(138, 184, 177, 0.421);
+            margin-left: 0.5%;
+            border-collapse: collapse;
+        }
+
+        td {
+            border-style: solid;
+            border-width: 2px;
+            font-size: large;
+            border-color: black;
+        }
+
+        th {
+            border-style: solid;
+            border-width: 2px;
+            font-size: larger;
+        }
+
+        .table-caption {
+            margin-right: 60%;
+        }
+
+        .row-one {
+            color: rgb(4, 73, 4);
+            border-color: black;
+        }
+
+        .row-two {
+            color: rgb(42, 37, 37);
+            border-color: black;
+        }
+
+        .row-three {
+            color: rgb(255, 255, 5);
+            border-color: black;
+        }
+
+        .row-four {
+            color: rgb(255, 5, 5);
+            border-color: black;
+            
+        }
         }
     </style>
     <script>

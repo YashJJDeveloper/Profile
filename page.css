@@ -4,46 +4,54 @@ body {
     margin: 0;
     padding: 0;
     position: relative;
-    overflow: hidden;
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+    scroll-behavior: smooth;
 }
 
 .video-background {
     position: absolute;
-   scroll-behavior: smooth;
+    scroll-behavior: smooth;
     width: 100vw;
-    height: 100vh;
-    overflow: hidden;
+    height: 1000px;
+    overflow: scroll;
     z-index: -1;
-    margin-top: -6vh;
+    margin-top: 0;
 }
+
 .entry-animation {
     opacity: 0;
     transform: translateY(20px);
-    animation: fadeInUp 1s ease-out forwards;
-  }
-  
-  /* Keyframes for the animation */
-  @keyframes fadeInUp {
+    animation: fadeInUp 2s ease-out forwards;
+}
+
+/* Keyframes for the animation */
+@keyframes fadeInUp {
     0% {
-      opacity: 0;
-      transform: translateY(20px);
-      transition-duration: 16000;
+        opacity: 0;
+        transform: translateY(20px);
+        transition-duration: 16000;
     }
-    25%{
+
+    25% {
         opacity: 0.3;
         transform: translateY(70px);
         transition-duration: 16000;
     }
-    50%{
+
+    50% {
         opacity: 0.5;
         transform: translateY(50px);
         transition-duration: 16000;
     }
+
     100% {
-      opacity: 1;
-      transform: translateY(0);
+        opacity: 1;
+        transform: translateY(0);
     }
-  }
+}
+
 #background-video {
     width: 100%;
     height: 100%;
@@ -53,13 +61,16 @@ body {
 
 .profile-container {
     max-width: 800px;
+    max-height: 75vh;
     margin: 50px auto;
+    margin-left: 350px;
     background: rgba(255, 255, 255, 0.553);
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
     overflow: hidden;
     position: relative;
     z-index: 1;
+
 }
 
 .profile-header {
@@ -93,11 +104,14 @@ body {
 
 .profile-section {
     margin-bottom: 20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
 }
 
 .profile-section h2 {
     margin-bottom: 10px;
-    color: #6c63ff;
+    color: #6b63ff;
 }
 
 .profile-skills {
@@ -110,19 +124,1176 @@ body {
     display: inline-block;
     padding: 5px 10px;
     margin: 5px;
-    
+
 }
 
 .profile-projects .project {
     margin-bottom: 10px;
-    
+
 }
 
 .project h3 {
     margin: 0 0 5px;
     color: #6c63ff;
 }
-.links{
+
+.links {
     text-decoration: none;
-    color:  #6c63ff;
+    color: #ff090179;
+    font-size: 1.5vw;
+    padding: 2%;
+
+}
+
+.links:hover {
+    color: rgb(203, 42, 42);
+
+}
+
+.right-panel {
+    display: flex;
+    flex-direction: row;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f982;
+    height: 55vh;
+
+
+
+}
+
+.right-upper {
+    height: 100%;
+    width: 35vw;
+    background-color: rgba(107, 99, 255, 0.513);
+    /* margin-top: 50px; */
+    padding: 8%;
+    border-radius: 10%;
+
+}
+
+.dropdown {
+    height: 300px;
+    width: 250px;
+    margin-right: 20px;
+
+
+}
+
+.dropdown:hover {
+    color: rgb(15, 4, 4);
+}
+
+.logo {
+    height: 3vh;
+    width: 2vw;
+    border: none;
+    border-radius: 50%;
+
+}
+
+.logo:hover {
+    overflow: visible;
+}
+
+.textmail {
+    text-decoration: underline;
+    font-size: 20px;
+}
+
+
+/* FOR SMALLER SCREENS */
+@media (min-width:701px) and (max-width: 900px) {
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f9;
+        position: relative;
+        overflow: scroll;
+        display: flex;
+        flex-direction: column;
+        scroll-behavior: smooth;
+       max-width: 100%; 
+        /* padding: auto; */
+    }
+
+    .video-background {
+        position: absolute;
+        scroll-behavior: smooth;
+        width: 100vw;
+        height: 100%;
+        overflow: scroll;
+        z-index: -1;
+        margin-top: 0;
+    }
+
+    .entry-animation {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeInUp 2s ease-out forwards;
+    }
+
+    /* Keyframes for the animation */
+    @keyframes fadeInUp {
+        0% {
+            opacity: 0;
+            transform: translateY(20px);
+            transition-duration: 16000;
+        }
+
+        25% {
+            opacity: 0.3;
+            transform: translateY(70px);
+            transition-duration: 16000;
+        }
+
+        50% {
+            opacity: 0.5;
+            transform: translateY(50px);
+            transition-duration: 16000;
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    #background-video {
+        width: 100%;
+
+        object-fit: cover;
+        filter: brightness(50%);
+    }
+
+    .profile-container {
+        min-width: 500px;
+        max-width: 700px;
+        max-height: 80vh;
+        margin: auto;
+        /* margin-left: 2em; */
+
+        background: rgba(255, 255, 255, 0.553);
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        position: relative;
+        z-index: 1;
+
+    }
+
+    .profile-header {
+        background-color: rgba(107, 99, 255, 0.513);
+        color: white;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .profile-picture {
+        width: 25vw;
+        height: 25vw;
+        border-radius: 50%;
+        border: 5px solid white;
+        margin-top: -5em;
+    }
+
+    .profile-name {
+        margin: 10px 0 5px;
+        font-size: 2em;
+    }
+
+    .profile-bio {
+        font-style: italic;
+        color: #ddd;
+    }
+
+    .profile-content {
+        padding: 2em;
+    }
+
+    .profile-section {
+        margin-bottom: 20px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .profile-section h2 {
+        margin-bottom: 10px;
+        color: #6b63ff;
+    }
+
+    .profile-skills {
+        list-style: none;
+        padding: 0;
+    }
+
+    .profile-skills li {
+        font-size: 20px;
+        display: inline-block;
+        padding: 5px 10px;
+        margin: 5px;
+
+    }
+
+    .profile-projects .project {
+        margin-bottom: 10px;
+
+    }
+
+    .project h3 {
+        margin: 0 0 5px;
+        color: #6c63ff;
+    }
+
+    .links {
+        text-decoration: none;
+        color: #ff090179;
+        font-size: 15px;
+        padding: 2%;
+
+    }
+
+    .links:hover {
+        color: rgb(203, 42, 42);
+
+    }
+
+    .right-panel {
+        display: flex;
+        flex-direction: row;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: scroll;
+        position: relative;
+        z-index: 1;
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f982;
+        height: 30vh;
+        min-width: 710px;
+        max-width: 100%;
+        margin-top: 5%;
+
+
+
+
+    }
+
+    .right-upper {
+        height: 100%;
+        width: 50vw;
+        background-color: rgba(107, 99, 255, 0.513);
+        /* margin-top: 50px; */
+        padding: 8%;
+        border-radius: 10%;
+
+    }
+
+    .dropdown {
+        height: 300px;
+        width: 20%;
+        margin-right: 75px;
+
+
+
+    }
+
+    .dropdown:hover {
+        color: rgb(15, 4, 4);
+    }
+
+    .logo {
+        height: 3vh;
+        width: 2vw;
+        border: none;
+        border-radius: 50%;
+
+    }
+
+    .logo:hover {
+        overflow: visible;
+    }
+
+    .textmail {
+        text-decoration: underline;
+        font-size: 15px;
+    }
+}
+
+/* FOR SMALL SCREEN */
+@media (min-width:300px) and (max-width: 500px) {
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f9;
+        position: relative;
+        overflow: scroll;
+        display: flex;
+        flex-direction: column;
+        scroll-behavior: smooth;
+        /* padding: auto; */
+    }
+
+    .video-background {
+        position: absolute;
+        scroll-behavior: smooth;
+        width: 550px;
+        height: 100%;
+        overflow: scroll;
+        z-index: -1;
+        margin-top: 0;
+    }
+
+    .entry-animation {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeInUp 2s ease-out forwards;
+    }
+
+    /* Keyframes for the animation */
+    @keyframes fadeInUp {
+        0% {
+            opacity: 0;
+            transform: translateY(20px);
+            transition-duration: 16000;
+        }
+
+        25% {
+            opacity: 0.3;
+            transform: translateY(70px);
+            transition-duration: 16000;
+        }
+
+        50% {
+            opacity: 0.5;
+            transform: translateY(50px);
+            transition-duration: 16000;
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    #background-video {
+        width: 550px;
+
+        object-fit: cover;
+        filter: brightness(50%);
+    }
+
+    .profile-container {
+        min-width: 350px;
+        max-width: 500px;
+        max-height: 80vh;
+        margin: auto;
+        margin-left: 5.5em;
+
+        background: rgba(255, 255, 255, 0.553);
+        border-radius: 10px;
+        /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+        overflow: hidden;
+        position: relative;
+        z-index: 1;
+
+    }
+
+    .profile-header {
+        background-color: rgba(107, 99, 255, 0.513);
+        color: white;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .profile-picture {
+        width: 25vw;
+        height: 25vw;
+        border-radius: 50%;
+        border: 5px solid white;
+        margin-top: -5em;
+    }
+
+    .profile-name {
+        margin: 10px 0 5px;
+        font-size: 2em;
+    }
+
+    .profile-bio {
+        font-style: italic;
+        color: #ddd;
+    }
+
+    .profile-content {
+        padding: 2em;
+    }
+
+    .profile-section {
+        margin-bottom: 20px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .profile-section h2 {
+        margin-bottom: 10px;
+        color: #6b63ff;
+    }
+
+    .profile-skills {
+        list-style: none;
+        padding: 0;
+    }
+
+    .profile-skills li {
+        font-size: 20px;
+        display: inline-block;
+        padding: 5px 10px;
+        margin: 5px;
+
+    }
+
+    .profile-projects .project {
+        margin-bottom: 10px;
+
+    }
+
+    .project h3 {
+        margin: 0 0 5px;
+        color: #6c63ff;
+    }
+
+    .links {
+        text-decoration: none;
+        color: #ff090179;
+        font-size: 15px;
+        padding: 2%;
+
+    }
+
+    .links:hover {
+        color: rgb(203, 42, 42);
+
+    }
+
+    .right-panel {
+        display: flex;
+        flex-direction: column-reverse;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow:scroll;
+        position: relative;
+        z-index: 1;
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f982;
+        height: 30vh;
+        min-width: 350px;
+        max-width: 100%;
+        margin-left: 5.5em;
+       
+        
+
+
+
+    }
+
+    .right-upper {
+        height: 100%;
+        width: 50vw;
+        background-color: rgba(107, 99, 255, 0.513);
+        margin-left: 15%;
+        padding: 8%;
+        border-radius: 10%;
+
+    }
+
+    .dropdown {
+        height: 500px;
+        width: 20%;
+        padding: 10%;
+
+
+    } 
+
+    .dropdown:hover {
+        color: rgb(15, 4, 4);
+    }
+
+    .logo {
+        height: 3vh;
+        width: 2vw;
+        border: none;
+        border-radius: 50%;
+
+    }
+
+    .logo:hover {
+        overflow: visible;
+    }
+
+    .textmail {
+        text-decoration: underline;
+        font-size: 50%;
+    }
+}
+
+
+/* FOR MEDIUM SCREEN */
+
+
+@media (min-width:501px) and (max-width: 700px) {
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f9;
+        position: relative;
+        overflow: scroll;
+        display: flex;
+        flex-direction: column;
+        scroll-behavior: smooth;
+        /* padding: auto; */
+    }
+
+    .video-background {
+        position: absolute;
+        scroll-behavior: smooth;
+        width: 100%;
+        height: 100%;
+        overflow: scroll;
+        z-index: -1;
+        margin-top: 0;
+    }
+
+    .entry-animation {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeInUp 2s ease-out forwards;
+    }
+
+    /* Keyframes for the animation */
+    @keyframes fadeInUp {
+        0% {
+            opacity: 0;
+            transform: translateY(20px);
+            transition-duration: 16000;
+        }
+
+        25% {
+            opacity: 0.3;
+            transform: translateY(70px);
+            transition-duration: 16000;
+        }
+
+        50% {
+            opacity: 0.5;
+            transform: translateY(50px);
+            transition-duration: 16000;
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    #background-video {
+        width: 100%;
+
+        object-fit: cover;
+        filter: brightness(50%);
+    }
+
+    .profile-container {
+        min-width: 500px;
+        max-width: 700px;
+        max-height: 80vh;
+        margin: auto;
+        /* margin-left: 2em; */
+
+        background: rgba(255, 255, 255, 0.553);
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        position: relative;
+        z-index: 1;
+
+    }
+
+    .profile-header {
+        background-color: rgba(107, 99, 255, 0.513);
+        color: white;
+        text-align: center;
+        padding: 20px;
+        width: 100%;
+    }
+
+    .profile-picture {
+        width: 25vw;
+        height: 25vw;
+        border-radius: 50%;
+        border: 5px solid white;
+        margin-top: -5em;
+    }
+
+    .profile-name {
+        margin: 10px 0 5px;
+        font-size: 2em;
+    }
+
+    .profile-bio {
+        font-style: italic;
+        color: #ddd;
+    }
+
+    .profile-content {
+        padding: 2em;
+    }
+
+    .profile-section {
+        margin-bottom: 20px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .profile-section h2 {
+        margin-bottom: 10px;
+        color: #6b63ff;
+    }
+
+    .profile-skills {
+        list-style: none;
+        padding: 0;
+    }
+
+    .profile-skills li {
+        font-size: 20px;
+        display: inline-block;
+        padding: 5px 10px;
+        margin: 5px;
+
+    }
+
+    .profile-projects .project {
+        margin-bottom: 10px;
+
+    }
+
+    .project h3 {
+        margin: 0 0 5px;
+        color: #6c63ff;
+    }
+
+    .links {
+        text-decoration: none;
+        color: #ff090179;
+        font-size: 15px;
+        padding: 2%;
+
+    }
+
+    .links:hover {
+        color: rgb(203, 42, 42);
+
+    }
+
+    .right-panel {
+        display: flex;
+        flex-direction: row;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow:scroll;
+        position: relative;
+        z-index: 1;
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f982;
+        height: 30vh;
+        min-width: 500px;
+        max-width: 710px;
+        margin-top: 5%;
+
+
+
+
+    }
+
+    .right-upper {
+        height: 100%;
+        width: 50vw;
+        background-color: rgba(107, 99, 255, 0.513);
+        /* margin-top: 50px; */
+        padding: 8%;
+        border-radius: 10%;
+
+    }
+
+    .dropdown {
+        height: 300px;
+        width: 20%;
+        margin-right: 75px;
+
+
+
+    }
+
+    .dropdown:hover {
+        color: rgb(15, 4, 4);
+    }
+
+    .logo {
+        height: 3vh;
+        width: 2vw;
+        border: none;
+        border-radius: 50%;
+
+    }
+
+    .logo:hover {
+        overflow: visible;
+    }
+
+    .textmail {
+        text-decoration: underline;
+        font-size: 15px;
+    }
+}
+
+
+/* FOR LARGE SCREEN */
+
+
+@media (min-width:701px) and (max-width: 900px) {
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f9;
+        position: relative;
+        overflow: scroll;
+        display: flex;
+        flex-direction: column;
+        scroll-behavior: smooth;
+       max-width: 100%; 
+        /* padding: auto; */
+    }
+
+    .video-background {
+        position: absolute;
+        scroll-behavior: smooth;
+        width: 100vw;
+        height: 100%;
+        overflow: scroll;
+        z-index: -1;
+        margin-top: 0;
+    }
+
+    .entry-animation {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeInUp 2s ease-out forwards;
+    }
+
+    /* Keyframes for the animation */
+    @keyframes fadeInUp {
+        0% {
+            opacity: 0;
+            transform: translateY(20px);
+            transition-duration: 16000;
+        }
+
+        25% {
+            opacity: 0.3;
+            transform: translateY(70px);
+            transition-duration: 16000;
+        }
+
+        50% {
+            opacity: 0.5;
+            transform: translateY(50px);
+            transition-duration: 16000;
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    #background-video {
+        width: 100%;
+
+        object-fit: cover;
+        filter: brightness(50%);
+    }
+
+    .profile-container {
+        min-width: 500px;
+        max-width: 700px;
+        max-height: 80vh;
+        margin: auto;
+        /* margin-left: 2em; */
+
+        background: rgba(255, 255, 255, 0.553);
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        position: relative;
+        z-index: 1;
+
+    }
+
+    .profile-header {
+        background-color: rgba(107, 99, 255, 0.513);
+        color: white;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .profile-picture {
+        width: 25vw;
+        height: 25vw;
+        border-radius: 50%;
+        border: 5px solid white;
+        margin-top: -5em;
+    }
+
+    .profile-name {
+        margin: 10px 0 5px;
+        font-size: 2em;
+    }
+
+    .profile-bio {
+        font-style: italic;
+        color: #ddd;
+    }
+
+    .profile-content {
+        padding: 2em;
+    }
+
+    .profile-section {
+        margin-bottom: 20px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .profile-section h2 {
+        margin-bottom: 10px;
+        color: #6b63ff;
+    }
+
+    .profile-skills {
+        list-style: none;
+        padding: 0;
+    }
+
+    .profile-skills li {
+        font-size: 20px;
+        display: inline-block;
+        padding: 5px 10px;
+        margin: 5px;
+
+    }
+
+    .profile-projects .project {
+        margin-bottom: 10px;
+
+    }
+
+    .project h3 {
+        margin: 0 0 5px;
+        color: #6c63ff;
+    }
+
+    .links {
+        text-decoration: none;
+        color: #ff090179;
+        font-size: 15px;
+        padding: 2%;
+
+    }
+
+    .links:hover {
+        color: rgb(203, 42, 42);
+
+    }
+
+    .right-panel {
+        display: flex;
+        flex-direction: row;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: scroll;
+        position: relative;
+        z-index: 1;
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f982;
+        height: 30vh;
+        min-width: 710px;
+        max-width: 100%;
+        margin-top: 5%;
+
+
+
+
+    }
+
+    .right-upper {
+        height: 100%;
+        width: 50vw;
+        background-color: rgba(107, 99, 255, 0.513);
+        /* margin-top: 50px; */
+        padding: 8%;
+        border-radius: 10%;
+
+    }
+
+    .dropdown {
+        height: 300px;
+        width: 20%;
+        margin-right: 75px;
+
+
+
+    }
+
+    .dropdown:hover {
+        color: rgb(15, 4, 4);
+    }
+
+    .logo {
+        height: 3vh;
+        width: 2vw;
+        border: none;
+        border-radius: 50%;
+
+    }
+
+    .logo:hover {
+        overflow: visible;
+    }
+
+    .textmail {
+        text-decoration: underline;
+        font-size: 15px;
+    }
+}
+
+
+
+/* FOR LARGER SCREENS */
+@media (min-width:901px)  {
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f9;
+        position: relative;
+        overflow: scroll;
+        display: flex;
+        flex-direction: column;
+        scroll-behavior: smooth;
+       max-width: 100%; 
+        /* padding: auto; */
+    }
+
+    .video-background {
+        position: absolute;
+        scroll-behavior: smooth;
+        width: 100vw;
+        height: 100%;
+        overflow: scroll;
+        z-index: -1;
+        margin-top: 0;
+    }
+
+    .entry-animation {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeInUp 2s ease-out forwards;
+    }
+
+    /* Keyframes for the animation */
+    @keyframes fadeInUp {
+        0% {
+            opacity: 0;
+            transform: translateY(20px);
+            transition-duration: 16000;
+        }
+
+        25% {
+            opacity: 0.3;
+            transform: translateY(70px);
+            transition-duration: 16000;
+        }
+
+        50% {
+            opacity: 0.5;
+            transform: translateY(50px);
+            transition-duration: 16000;
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    #background-video {
+        width: 100%;
+
+        object-fit: cover;
+        filter: brightness(50%);
+    }
+
+    .profile-container {
+        min-width: 500px;
+        max-width: 700px;
+        max-height: 80vh;
+        margin: auto;
+        /* margin-left: 2em; */
+
+        background: rgba(255, 255, 255, 0.553);
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        position: relative;
+        z-index: 1;
+
+    }
+
+    .profile-header {
+        background-color: rgba(107, 99, 255, 0.513);
+        color: white;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .profile-picture {
+        width: 25vw;
+        height: 25vw;
+        border-radius: 50%;
+        border: 5px solid white;
+        margin-top: -5em;
+    }
+
+    .profile-name {
+        margin: 10px 0 5px;
+        font-size: 2em;
+    }
+
+    .profile-bio {
+        font-style: italic;
+        color: #ddd;
+    }
+
+    .profile-content {
+        padding: 2em;
+    }
+
+    .profile-section {
+        margin-bottom: 20px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .profile-section h2 {
+        margin-bottom: 10px;
+        color: #6b63ff;
+    }
+
+    .profile-skills {
+        list-style: none;
+        padding: 0;
+    }
+
+    .profile-skills li {
+        font-size: 20px;
+        display: inline-block;
+        padding: 5px 10px;
+        margin: 5px;
+
+    }
+
+    .profile-projects .project {
+        margin-bottom: 10px;
+
+    }
+
+    .project h3 {
+        margin: 0 0 5px;
+        color: #6c63ff;
+    }
+
+    .links {
+        text-decoration: none;
+        color: #ff090179;
+        font-size: 15px;
+        padding: 2%;
+
+    }
+
+    .links:hover {
+        color: rgb(203, 42, 42);
+
+    }
+
+    .right-panel {
+        display: flex;
+        flex-direction: row;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: scroll;
+        position: relative;
+        z-index: 1;
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f982;
+        height: 30vh;
+        min-width: 710px;
+        max-width: 100%;
+        margin-top: 5%;
+
+
+
+
+    }
+
+    .right-upper {
+        height: 100%;
+        width: 50vw;
+        background-color: rgba(107, 99, 255, 0.513);
+        /* margin-top: 50px; */
+        padding: 8%;
+        border-radius: 10%;
+
+    }
+
+    .dropdown {
+        height: 300px;
+        width: 20%;
+        margin-right: 75px;
+
+
+
+    }
+
+    .dropdown:hover {
+        color: rgb(15, 4, 4);
+    }
+
+    .logo {
+        height: 3vh;
+        width: 2vw;
+        border: none;
+        border-radius: 50%;
+
+    }
+
+    .logo:hover {
+        overflow: visible;
+    }
+
+    .textmail {
+        text-decoration: underline;
+        font-size: 15px;
+    }
 }
