@@ -714,7 +714,7 @@ body {
         background: rgba(255, 255, 255, 0.553);
         border-radius: 10px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        overflow: hidden;
+        overflow: scroll;
         position: relative;
         z-index: 1;
 
@@ -1082,7 +1082,7 @@ body {
 
 
 /* FOR LARGER SCREENS */
-@media (min-width:901px)  {
+@media (min-width:901px) and (max-width:3000px) {
     body {
         font-family: Arial, sans-serif;
         background-color: #f4f4f9;
@@ -1146,10 +1146,10 @@ body {
 
     .profile-container {
         min-width: 500px;
-        max-width: 700px;
+        max-width: 90vw;
         max-height: 80vh;
         margin: auto;
-        /* margin-left: 2em; */
+        margin-bottom: 2em;
 
         background: rgba(255, 255, 255, 0.553);
         border-radius: 10px;
@@ -1190,14 +1190,14 @@ body {
     }
 
     .profile-section {
-        margin-bottom: 20px;
+        margin-bottom: -5px;
         padding: 10px;
         display: flex;
         flex-direction: column;
     }
 
     .profile-section h2 {
-        margin-bottom: 10px;
+        margin-bottom: -10px;
         color: #6b63ff;
     }
 
