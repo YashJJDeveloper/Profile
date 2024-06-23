@@ -1,117 +1,184 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
     <style>
-        .body {
-            background-image: url("https://c4.wallpaperflare.com/wallpaper/738/744/882/music-vinyl-simple-background-minimalism-wallpaper-preview.jpg");
+        body {
+            background-image: url(./assets/musicbg.jpg);
             background-repeat: no-repeat;
             background-size: cover;
+            margin: 0;
+            padding: 0;
             height: 100vh;
             width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #000;
+            overflow: scroll;
+            color: black;
+        }
+        .container {
+            width: 50vw;
+            height: 50vw;
+            text-align: center;
+            padding: 20px;
+            color: black;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background: linear-gradient(45deg, #af0909c2, #0707b177, #c307c377, #64c70777);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
         }
 
-        .music-station {
-            display: flex;
-            flex-direction: column;
-            margin: 10%;
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+/* Control styling */
+        .controls {
+            margin-top: 200px;
+
+        }
+        .controls button {
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 0 10px;
+            border: none;
+            border-radius: 20px;
+            background-color: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+
+        }
+        .controls input[type="range"] {
+            width: 100%;
+
+        }
+        #displaySong {
+            margin-top: 50px;
+            font-size: 18px;
+            font-weight: bold;
+            color: black;
+            font-family: Arial, sans-serif;
+
+        }
+        .songImage {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 30px;
+            display: none;
+            border-radius: 20px;
+            margin-left: 200px;
 
         }
     </style>
-    <script>
-        // // Get the audio element
-
-
-        // // Function to play the audio
-        // function playAudio() {
-        //     let audio = document.getElementById("myAudio");
-        //     audio.play();
-
-        // }
-
-        // // Function to pause the audio
-        // function pauseAudio() {
-        //     let audio = document.getElementById("myAudio");
-        //     audio.pause();
-        // }
-        // // Function to play the audio
-        // function nextAudio() {
-        //     let audio = document.getElementById("secondAudio");
-        //     audio.play();
-        // }
-        // // Function to pause the audio
-        // function pauseAudioTwo() {
-        //     let audio = document.getElementById("secondAudio");
-        //     audio.pause();
-        // }
-        // // Function to play the audio
-        // function audioThree() {
-        //     let audio = document.getElementById("song");
-        //     audio.play();
-        // }
-        // // Function to pause the audio
-        // function pauseAudioThree() {
-        //     let audio = document.getElementById("song");
-        // audio.pause();
-        // }
-// '<audio id="firstSong"><source src="./assets/ethereal-vistas.mp3" type="audio/mpeg"></audio>, <audio id="secondSong"><source src="./assets/glossy.mp3"></audio>, <audio id="thirdSong"><source src="./assets/Rom Rom.mp3"></audio>'
-        let x = [];
-        function startAudio(){
-            let music = {};
-        music["songOne"] = document.getElementById("firstSong").audio;
-        music["songTwo"] = document.getElementById("secondSong").audio;
-        music["songThree"] = document.getElementById("thirdSong").audio;
-        x.push(music);
-        
-        }
-        let playSong =  
-
-        function previousAudio() {  
-            audio--;  
-            audio.play();
-            
-        }
-
-        function playAudio() {
-            audio.play();
-        }
-
-        function pauseAudio() {
-            audio.pause();
-        }
-        function nextAudio(){
-            audio++;
-            audio.play();
-        }
-    </script>
 </head>
 
-<body class="body">
-    <div class="music-station">
-        <div>
-            <button onclick="startAudio()">Start Music</button>
-            <button onclick="previousAudio()"> Previous Song</button>
-            <button onclick="playAudio()"> <img src="./assets/playbutton.jpg" height="35px" width="50px"></button>
-            <button onclick="pauseAudio()"><img src="./assets/pausebutton.jpg" height="35px" width="50px"></button>
-            <button onclick="nextAudio()"> Next Song </button>
-        </div>
-        <div class="songs" id="songs">
+<body>
+    <div class="container">
+        <div id="displaySong"></div>
+        <!-- Song images-->
+        <img id="imageOne" class="songImage" src="./assets/music-one.jpg" height="400px" width="700px">
+        <img id="imageTwo" class="songImage" src="./assets/musicbg-two.jpg" height="100px" width="100px">
+        <img id="imageThree" class="songImage" src="./assets/music-one.jpg"height="100px" width="100px">
 
-
-            <audio id="firstSong">
-                <source src="./assets/ethereal-vistas.mp3" type="audio/mpeg">
-
-            </audio>
-            <audio id="secondSong">
-                <source src="./assets/glossy.mp3">
-            </audio>
-            <audio id="thirdSong">
-                <source src="./assets/Rom Rom.mp3">
-            </audio>
+        <div class="controls">
+            <!--  volume controls -->
+            <button id="prevSongbtn">Previous</button>
+            <button id="pausePlayBtn">Play</button>
+            <button id="nextBtn">Next</button>
+            <input type="range" id="volumeControl" min="0" max="1" step="0.1" value="1" style="margin-top: 20px;">
         </div>
 
-
+       
+        <audio id="audioPlayer">
+            <source src="./assets/ethereal-vistas.mp3" type="audio/mpeg">
+            <source src="./assets/Rom Rom.mp3" type="audio/mpeg">
+            <source src="./assets/glossy.mp3" type="audio/mpeg">
+            <!-- Add  additional songs -->
+        </audio>
     </div>
 
+    <!-- Script -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Get necessary elements from the DOM
+            const audioPlayer = document.getElementById("audioPlayer");
+            const pausePlayBtn = document.getElementById("pausePlayBtn");
+            const nextBtn = document.getElementById("nextBtn");
+            const prevSongbtn = document.getElementById("prevSongbtn");
+            const volumeControl = document.getElementById("volumeControl");
+            const displaySong = document.getElementById("displaySong");
+            const songImages = document.getElementsByClassName("songImage");
+            let currentSongIndex = 0;
+
+            // Event listener for play/pause button
+            pausePlayBtn.addEventListener("click", function () {
+                if (audioPlayer.paused) {
+                    audioPlayer.play();
+                    pausePlayBtn.textContent = "Pause";
+                } else {
+                    audioPlayer.pause();
+                    pausePlayBtn.textContent = "Play";
+                }
+            });
+
+            // Event listener next song 
+            nextBtn.addEventListener("click", function () {
+                currentSongIndex = (currentSongIndex + 1) % audioPlayer.children.length;
+                audioPlayer.src = audioPlayer.children[currentSongIndex].src;
+                audioPlayer.play();
+            });
+
+            // Event listener previous 
+            prevSongbtn.addEventListener("click", function () {
+                currentSongIndex = (currentSongIndex - 1 + audioPlayer.children.length) % audioPlayer.children.length;
+                audioPlayer.src = audioPlayer.children[currentSongIndex].src;
+                audioPlayer.play();
+            });
+
+            // Event listener  sound 
+            volumeControl.addEventListener("input", function () {
+                audioPlayer.volume = volumeControl.value;
+            });
+
+            // Event listener   start
+            audioPlayer.addEventListener("play", function () {
+                // show song playing
+                displaySong.textContent = audioPlayer.currentSrc.split("/").pop();
+                // Hide all song
+                for (let i = 0; i < songImages.length; i++) {
+                    songImages[i].style.display = "none";
+                }
+                // Show image of  song playing
+                songImages[currentSongIndex].style.display = "block";
+            });
+
+            // Event listener  audio-paused
+            audioPlayer.addEventListener("pause", function () {
+                // Clear song name display
+                displaySong.textContent = "";
+                // Hide all song images
+                for (let i = 0; i < songImages.length; i++) {
+                    songImages[i].style.display = "none";
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>

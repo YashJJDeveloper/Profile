@@ -4,10 +4,14 @@
     <style>
         #display {
             height: 30%;
-            width: 100%;
+            width: 10vw;
             background-color: rgba(151, 151, 151, 0.23);
             padding: 5%;
             color: rgb(7, 14, 27);
+            align-items: flex-end;
+            align-content: end;
+            display: block;
+            margin-left: 37vw; 
         }
 
         .body {
@@ -17,6 +21,14 @@
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
+        }
+
+        #input{
+            margin-left: 40vw;
+        }
+        .screen{
+            margin-left: 40vw;
+            align-items: flex-end;
         }
         
     </style>
@@ -51,7 +63,7 @@
 
 <body class="body">
     <div>
-        <div id="display" class="display"></div>
+        <div id="display" class="display"><div class="screen"></div></div>
         <input type="number" id="input">
         <button onclick="iterate()">Click</button>
     </div>
