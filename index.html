@@ -31,9 +31,9 @@
                     <br />
                     <div>
                         <p class="bio-one">A Full-stack Developer</p>
-                        <p class="bio-two">with full enthusiasm</p>
-                        <p class="bio-three">stacking various qualities</p>
-                        <p class="bio-four">& being developed...</p>
+                        <p class="bio-two">with FULL enthusiasm</p>
+                        <p class="bio-three">STACKing various qualities</p>
+                        <p class="bio-four">& being DEVELOPed...</p>
                     </div>
                 </div>
             </div>
@@ -81,9 +81,17 @@
            <div class="line-one">
             <div class="project-details">
                 <div class="container">
-                    <a href="" class="text">
-                        <img src="./assets/pro.jpg" alt="" class="project-icon" />
-                        <div class="middle">Chess</div>
+                    <a href="./table.html" class="text">
+                        <img src="./assets/table-icon.jpg" alt="" class="project-icon" />
+                        <div class="middle">Table</div>
+                    </a>
+                </div>
+            </div>
+            <div class="project-details">
+                <div class="container">
+                    <a href="./kbcpage.html" class="text">
+                        <img src="./assets/kbc-icon.jpg" alt="" class="project-icon" />
+                        <div class="middle">KBC</div>
                     </a>
                 </div>
             </div>
@@ -98,22 +106,13 @@
             <div class="project-details">
                 <div class="container">
                     <a href="./chess.html" class="text">
-                        <img src="./assets/pro.jpg" alt="" class="project-icon" />
+                        <img src="./assets/chess-icon.jpg" alt="" class="project-icon" />
                         <div class="middle">Chess</div>
                     </a>
                 </div>
-            </div>
-            <div class="project-details">
-                <div class="container">
-                    <a href="./chess.html" class="text">
-                        <img src="./assets/pro.jpg" alt="" class="project-icon" />
-                        <div class="middle">Chess</div>
-                    </a>
-                </div>
-            </div>
            </div>
 
-
+           </div>
             <!-- projects-lineTwo -->
 
 
@@ -160,9 +159,9 @@
              <div class="line-one">
                 <div class="project-details">
                 <div class="container">
-                    <a href="./chess.html" class="text">
-                        <img src="./assets/chess-icon.jpg" alt="" class="project-icon" />
-                        <div class="middle">Chess</div>
+                    <a href="./studentdata.html" class="text">
+                        <img src="./assets/Student-id-icon.jpg" alt="" class="project-icon" />
+                        <div class="middle">Admission Form</div>
                     </a>
                 </div>
             </div>
@@ -211,8 +210,8 @@
                     Skype</a>
                 <br />
 
-                <a href="https://mail.google.com/mail/u/0/?ogbl#inbox?compose=new" class="links">
-                    <img src="./assets/emaillogo.jpg" alt="" class="logos" />
+                <a onclick="copyEmail()" class="links" >
+                    <img src="./assets/emaillogo.jpg" alt="" class="logos"  onclick="copyEmail()"/>
                     abc@gmail.com</a>
             </div>
             <br>
@@ -236,20 +235,14 @@
     //     document.getElementById("project-lists").hidden = false;
 
     // }
-    function copy() {
-        // Get the text field
-        var copyText = document.getElementById("email");
-
-        // Select the text field
-        copyText.select();
-        copyText.setSelectionRange(0, 99999); // For mobile devices
-
-        // Copy the text inside the text field
-        navigator.clipboard.writeText(copyText.value);
-
-        // Alert the copied text
-        alert("Copied the text: " + copyText.value);
-    }
+    function copyEmail() {
+            const email = 'abc@example.com';
+            navigator.clipboard.writeText(email).then(() => {
+                alert('Email copied to clipboard');
+            }).catch(err => {
+                console.error('Failed to copy email: ', err);
+            });
+        }
 
     /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
