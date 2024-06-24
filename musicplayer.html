@@ -10,8 +10,9 @@
             background-image: url(./assets/musicbg.jpg);
             background-repeat: no-repeat;
             background-size: cover;
+            background-position: center;
             margin: 0;
-            padding: 0;
+            padding:0;
             height: 100vh;
             width: 100vw;
             display: flex;
@@ -20,43 +21,33 @@
             background-color: #000;
             overflow: scroll;
             color: black;
+            position: relative;
         }
         .container {
             width: 50vw;
             height: 50vw;
             text-align: center;
-            padding: 20px;
+            position: relative;
+            padding: 2vw;
             color: black;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            background: linear-gradient(45deg, #af0909c2, #0707b177, #c307c377, #64c70777);
             background-size: 400% 400%;
-            animation: gradient 15s ease infinite;
+           
         }
 
-        @keyframes gradient {
-            0% {
-                background-position: 0% 50%;
-            }
-
-            50% {
-                background-position: 100% 50%;
-            }
-
-            100% {
-                background-position: 0% 50%;
-            }
-        }
+       
 /* Control styling */
         .controls {
-            margin-top: 200px;
+            margin-top: 20vw;
+            position: fixed;
 
         }
         .controls button {
-            padding: 10px 20px;
+            padding: 1vw 2vw;
             cursor: pointer;
-            font-size: 16px;
-            margin: 0 10px;
+            font-size: 1.6vw;
+            margin: 0 1vw;
             border: none;
             border-radius: 20px;
             background-color: #000;
@@ -69,22 +60,23 @@
 
         }
         #displaySong {
-            margin-top: 50px;
-            font-size: 18px;
+            margin-top: 10vh;
+            font-size: 1.5vw;
             font-weight: bold;
             color: black;
             font-family: Arial, sans-serif;
 
         }
         .songImage {
-            width: 100px;
-            height: 100px;
-            margin-bottom: 30px;
+            width: 10vw;
+            height: 10vw;
+            margin-bottom: 2vh;
             display: none;
-            border-radius: 20px;
-            margin-left: 200px;
+            border-radius: 20%;
+            margin-left: 20vw;
 
         }
+
     </style>
 </head>
 
@@ -95,22 +87,22 @@
         <img id="imageOne" class="songImage" src="./assets/music-one.jpg" height="400px" width="700px">
         <img id="imageTwo" class="songImage" src="./assets/musicbg-two.jpg" height="100px" width="100px">
         <img id="imageThree" class="songImage" src="./assets/music-one.jpg"height="100px" width="100px">
-
-        <div class="controls">
-            <!--  volume controls -->
-            <button id="prevSongbtn">Previous</button>
-            <button id="pausePlayBtn">Play</button>
-            <button id="nextBtn">Next</button>
-            <input type="range" id="volumeControl" min="0" max="1" step="0.1" value="1" style="margin-top: 20px;">
-        </div>
-
        
+
         <audio id="audioPlayer">
             <source src="./assets/ethereal-vistas.mp3" type="audio/mpeg">
             <source src="./assets/Rom Rom.mp3" type="audio/mpeg">
             <source src="./assets/glossy.mp3" type="audio/mpeg">
             <!-- Add  additional songs -->
         </audio>
+    </div>
+
+    <div class="controls">
+        <!--  volume controls -->
+        <button id="prevSongbtn">Previous</button>
+        <button id="pausePlayBtn">Play</button>
+        <button id="nextBtn">Next</button>
+        <input type="range" id="volumeControl" min="0" max="1" step="0.1" value="1" style="margin-top: 20px;">
     </div>
 
     <!-- Script -->
