@@ -165,7 +165,7 @@ html{
 }
 
 
-.dropbtn:hover, .dropbtn:focus { 
+.dropbtn:hover .dropbtn:focus { 
   background-color: none;
 }
 
@@ -183,16 +183,7 @@ html{
   z-index: 1;
 }
 
-.dropdown-content a {
-  color:white;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
 
-.dropdown-content a:hover {
-  background-color: none;
-}
 
 .show {
   display: flex;
@@ -209,9 +200,7 @@ html{
   background-color: rgba(0, 0, 0, 0);
 }
 .profile-icon:hover {
-  /* transition: all 5s ease-out;
-  height: 50%;
-  width: 50%; */
+ 
   background-image: url(./assets/aibg.gif);
   opacity: 70%;
   filter: brightness(150%);
@@ -241,11 +230,7 @@ html{
   backface-visibility: hidden;
   border-radius: 20%;
 }
-/* .project-icon:hover {
-  transition: all 3s ease-out;
-  height: 101%;
-  width: 101%;
-} */
+
 .text {
   color: white;
   font-size: 2vw;
